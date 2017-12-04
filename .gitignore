@@ -1,52 +1,46 @@
-# Prerequisites
-*.d
+# Ignore PSoC Creator temp and user specific files
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Ignore test projects
+#TDust_UDB_Lib.cydsn
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Ignore Archive directory, project bundles there
+Archive/*
+Backup/*
+Archive/
+Backup/
 
-# Precompiled Headers
-*.gch
-*.pch
+# Projects optional files
+*.cydsn/codegentemp/
+*.cydsn/Generated_Source/
+*.cydsn/Export/
+*.cydsn/*.cyfit
+*.cydsn/*.rpt
+*.cydsn/*.html
+*.cydsn/*.cycdx
+*.cydsn/*.svd
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# PSoC 5LP based projects
+*.cydsn/CortexM3/
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# PSoC 4 based projects
+*.cydsn/CortexM0/
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# User specific files
+ComponentUpdateLog.txt
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Random file
+*.cylib/CortexM0/
+
+codegentemp
+Generated_Source
+CortexM3
+CortexM0
+Export
+*.rpt
+*.html
+*.svd
+*.cyfit
+*.Administrator
+*.noel
+*.log
