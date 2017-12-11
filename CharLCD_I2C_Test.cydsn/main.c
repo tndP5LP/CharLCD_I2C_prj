@@ -19,10 +19,28 @@ int main()
 {
     
 	CyGlobalIntEnable; /* Enable global interrupts. */
-	
+
+	/* Start SCB UART module */
+	UART_dbg_Start();
+	/* initialize tinyprintf with PSoC putchar function */
+	init_printf(NULL,putdata);
+	UART_dbg_PutString("USB_UART\n");
+	NewLine();
+	NewLine();
+
+	/* printf examples */
+	UART_dbg_PutString("printf Examples");
+	NewLine();
+	NewLine();
+    /* Run the TinyPrintf example */
+    tpf_test();
+
+    
 	I2C_M_FF_Start();
 	CharLCD_PCF8574_I2C_Start();
-	
+
+    
+    
 	for(;;)
     {
 /*
