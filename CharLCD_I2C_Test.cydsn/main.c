@@ -9,6 +9,7 @@
  *
  * ========================================
 */
+#include "cytypes.h"
 #include <project.h>
 
 cystatus I2C_status;
@@ -33,17 +34,42 @@ int main()
 	NewLine();
 	NewLine();
     /* Run the TinyPrintf example */
-    tpf_test();
+//    tpf_test();
 
+		
     
 	I2C_M_FF_Start();
 	CharLCD_PCF8574_I2C_Start();
 
-    
-    
+	printf("%u", I2C_status);
+	NewLine();    
+
+TrigggerScope();    
+    I2C_status = I2C_M_FF_MasterStatus();
+	printf("%u", I2C_status);
+	if ((I2C_status != I2C_M_FF_MSTAT_WR_CMPLT) && !FlgLCD_ERR)
+    {
+        FlgLCD_ERR = 1;
+    }
+	
+	if (FlgLCD_ERR && (I2C_status == I2C_M_FF_MSTAT_WR_CMPLT)) 
+    {
+UART_dbg_PutString("LCD OK\n");
+            CyDelay(250u);
+    }
+		CharLCD_PCF8574_I2C_PrintString("Cypress PSoC 4");
+		//CharLCD_PCF8574_I2C_Position(1u,2u);
+		CharLCD_PCF8574_I2C_PosPrintString(1u,2u,"Hello World");
+		CharLCD_PCF8574_I2C_PosPrintString(2u,0u,"CY8CKIT-042 20x4 LCD");
+		CharLCD_PCF8574_I2C_PosPrintString(3u,0u,"DEMO of CharLCD_PCF8574_I2C");
+   		CyDelay(1u);    
+    /* Scope trigger*/
+
 	for(;;)
     {
-/*
+#if 0
+        
+        /*
 		======================================
 		| ** CHECK LCD DISPLAY CONNECTION ** |
 		======================================
@@ -53,7 +79,8 @@ int main()
 		if ((I2C_status != I2C_M_FF_MSTAT_WR_CMPLT) && !FlgLCD_ERR){FlgLCD_ERR = 1;}
 	
 		if (FlgLCD_ERR && (I2C_status == I2C_M_FF_MSTAT_WR_CMPLT)) {
-			CyDelay(250u);
+UART_dbg_PutString("LCD OK\n");
+            CyDelay(250u);
 			CharLCD_PCF8574_I2C_Init();
 			CyDelay(250u);
 			FlgLCD_ERR = 0;}
@@ -71,6 +98,7 @@ int main()
 		=====================================================================
 		
 */
+//	    UART_dbg_PutString("LCD Hell0\n");        
 		CharLCD_PCF8574_I2C_Position(0u,1u);
 		CharLCD_PCF8574_I2C_PrintString("Cypress PSoC 4");
 		//CharLCD_PCF8574_I2C_Position(1u,2u);
@@ -78,7 +106,9 @@ int main()
 		CharLCD_PCF8574_I2C_PosPrintString(2u,0u,"CY8CKIT-042 20x4 LCD");
 		CharLCD_PCF8574_I2C_PosPrintString(3u,0u,"DEMO of CharLCD_PCF8574_I2C");
    		CyDelay(1u);
+#endif
 	}
+
 }
 
 /* [] END OF FILE */
