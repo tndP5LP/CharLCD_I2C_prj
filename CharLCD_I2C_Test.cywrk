@@ -10,14 +10,14 @@
 <v>.\CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj</v>
 </projects>
 <workspace_id v="c397cc05-a184-44a9-89da-e3f91e9a9c2f" />
-<WriteAppVersionLastSavedWith v="4.2.0.393" />
+<WriteAppVersionLastSavedWith v="4.2.0.641" />
 <WriteAppMarketingVersionLastSavedWith v="4.2" />
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
 <wrkspc_dependencies>
 <wrkspc_dependency project="CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj" dependency="..\..\ComponentsDev\TDust_UDB_Lib\TDust_UDB_Lib.cylib\TDust_UDB_Lib.cyprj" />
 <wrkspc_dependency project="CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj" dependency="..\..\ComponentsDev\Odissey1_lib\Odissey1_lib.cylib\Odissey1_lib.cyprj" />
-<wrkspc_dependency project="CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj" dependency="..\..\ComponentsDev\ND_P5LP_Sch_Macro_lib\ND_P5LP_Sch_Macro_lib.cylib\ND_P5LP_Sch_Macro_lib.cyprj" />
 <wrkspc_dependency project="CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj" dependency="..\..\ComponentsDev\ND_P5LP_Component_lib\ND_P5LP_Comp_lib.cylib\ND_P5LP_Comp_lib.cyprj" />
+<wrkspc_dependency project="CharLCD_I2C_Test.cydsn\CharLCD_I2C_Test.cyprj" dependency="..\..\ComponentsDev\ND_P5LP_Sch_Macro_lib\ND_P5LP_Sch_Macro_lib.cylib\ND_P5LP_Sch_Macro_lib.cyprj" />
 </wrkspc_dependencies>
 </CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316>
 <CyGuid_63b68103-67f5-4406-8da6-5c8625765b82 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyIgnoredSystemDepsList" version="1">
